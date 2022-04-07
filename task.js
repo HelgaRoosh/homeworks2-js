@@ -31,5 +31,13 @@ function makeWork(arrOfArr, func) {
 
 // Задание 3
 function worker2(arr) {
-  // Ваш код
+  let min = Infinity;
+  let max = - Infinity;
+  let intervalMaxMin = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) max = arr[i];
+    if (arr[i] < min) min = arr[i];
+  }
+  intervalMaxMin = Math.abs(max - min);
+  return intervalMaxMin;
 }
